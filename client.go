@@ -8,6 +8,14 @@ import (
 	"strings"
 )
 
+func NewClient(accountSID, authToken, phoneNumber string) *Client {
+	return &Client{
+		AccountSID:  accountSID,
+		AuthToken:   authToken,
+		PhoneNumber: phoneNumber,
+	}
+}
+
 type Client struct {
 	AccountSID  string
 	AuthToken   string
